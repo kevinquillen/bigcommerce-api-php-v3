@@ -24,3 +24,6 @@ jobs:
           php-version: ${{ matrix.php-versions }}
       - name: Run Composer
         run: composer install
+      - name: Run PHPUnit tests
+        id: phpunit
+        run: ./vendor/bin/phpunit
